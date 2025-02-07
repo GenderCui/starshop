@@ -13,10 +13,10 @@ class MainController extends AbstractController
     {
         $starshipCount = 457;
         $miNave = [
-            'nombre' => 'La Barquica Aspañola',
+            'name' => 'La Barquica Aspañola',
             'class' => 'Acorazado',
-            'capitan' => 'Paquito Pepinillos',
-            'estado' => 'En construcción'
+            'captain' => 'Paquito Pepinillos',
+            'status' => 'En construcción'
 
         ];
 

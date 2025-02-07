@@ -6,13 +6,32 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
-final class StarshipApiController extends AbstractController
+class StarshipApiController extends AbstractController
 {
-    #[Route('/starship/api', name: 'app_starship_api')]
-    public function index(): Response
+    #[Route('/api/starships')]
+    public function getCollection(): Response
     {
-        return $this->render('starship_api/index.html.twig', [
-            'controller_name' => 'StarshipApiController',
-        ]);
+        $starships = [
+            [
+                'name' => 'USS LeafyCruiser (NCC-0001)',
+                'class' => 'Garden',
+                'captain' => 'Jean-Luc Pickles',
+                'status' => 'taken over by Q',
+            ],
+            [
+                'name' => 'USS Espresso (NCC-1234-C)',
+                'class' => 'Latte',
+                'captain' => 'James T. Quick!',
+                'status' => 'repaired',
+            ],
+            [
+                'name' => 'USS Wanderlust (NCC-2024-W)',
+                'class' => 'Delta Tourist',
+                'captain' => 'Kathryn Journeyway',
+                'status' => 'under construction',
+            ],
+        ];
+
+        return $this->json($starships);
     }
 }
