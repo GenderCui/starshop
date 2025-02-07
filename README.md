@@ -509,7 +509,7 @@ A veces también oirás que estos servicios están organizados en un gran objeto
 Busca tu terminal y ejecuta:
 
 ```shell
-bin/console debug:container
+symfony console debug:container
 ```
 
 ### Los bundles proporcionan servicios
@@ -523,7 +523,7 @@ Y aunque hay muchos servicios en esta lista, la gran mayoría son objetos de ser
 En su lugar, ejecuta un comando relacionado llamado:
 
 ```shell
-php bin/console debug:autowiring
+symfony console debug:autowiring
 ```
 
 Esto nos muestra todos los servicios que son autocableables, que es la técnica que utilizaremos para obtener servicios. Básicamente, es una lista simplificada de los servicios que es más probable que necesitemos.
