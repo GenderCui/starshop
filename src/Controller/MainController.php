@@ -16,13 +16,12 @@ class MainController extends AbstractController
             'name' => 'La Barquica Aspañola',
             'class' => 'Acorazado',
             'captain' => 'Paquito Pepinillos',
-            'status' => 'En construcción'
-
+            'status' => 'En construcción',
         ];
 
         return $this->render('main/homepage.html.twig', [
             'numberOfStarships' => $starshipCount,
             'miNave' => $miNave,
-                ]);
+        ]);
     }
 }
