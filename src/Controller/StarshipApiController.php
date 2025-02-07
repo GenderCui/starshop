@@ -2,22 +2,18 @@
 
 namespace App\Controller;
 
-use App\Model\Starship;
-use Psr\Log\LoggerInterface;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use App\Repository\StarshipRepository;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 class StarshipApiController extends AbstractController
 {
     #[Route('/api/starships')]
-    public function getCollection(LoggerInterface $logger, StarshipRepository $repository): Response
+    public function getCollection(StarshipRepository $repository): Response
     {
-        $logger->notice('solicitado listado de naves');
         $starships = $repository->findAll();
 
         return $this->json($starships);
     }
-
 }
