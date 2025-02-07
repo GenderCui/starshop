@@ -1,3 +1,35 @@
 <h1>
     Starshop: your monopoly-busting option for Starship parts!
 </h1>
+
+<div>
+    Acho mira tu que vienen {{numberOfStarships}} navecicas!
+</div>
+
+<div>
+{% if numberOfStarships > 400 %}
+    <p>
+        -Copón que jartá de naves!
+    </p>
+{% endif %}
+</div>
+
+<table>
+        <tr>
+            <th>Name</th>
+            <td>{{ miNave.nombre|upper }}</td>
+        </tr>
+        <tr>
+            <th>Class</th>
+            <td>{{ miNave.class }}</td>
+        </tr>
+        <tr>
+            <th>Captain</th>
+            <td>{{ miNave.capitan|upper|lower|title }}</td>
+        </tr>
+        <tr>
+            <th>Status</th>
+            <td>{{ miNave.estado }}</td>
+        </tr>
+    </table>
+</div>

@@ -12,9 +12,17 @@ class MainController extends AbstractController
     public function homepage(): Response
     {
         $starshipCount = 457;
+        $miNave = [
+            'nombre' => 'La Barquica Aspañola',
+            'class' => 'Acorazado',
+            'capitan' => 'Paquito Pepinillos',
+            'estado' => 'En construcción'
+
+        ];
 
         return $this->render('main/homepage.html.twig', [
             'numberOfStarships' => $starshipCount,
-        ]);
+            'miNave' => $miNave,
+                ]);
     }
 }
