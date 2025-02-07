@@ -9,8 +9,8 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class StarshipApiController extends AbstractController
 {
-    #[Route('/api/starships')]
-    public function getCollection(StarshipRepository $repository): Response
+    #[Route('/api/starships/{id<+d>}')]
+    public function getCollection(StarshipRepository $repository, int $id): Response
     {
         $starships = $repository->findAll();
 
