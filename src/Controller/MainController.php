@@ -13,6 +13,7 @@ final class MainController extends AbstractController
     {
         return $this->json([
             'message' => 'Welcome to your new controller!',
+
             'path' => 'src/Controller/MainController.php',
         ]);
     }
